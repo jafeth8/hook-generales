@@ -7,7 +7,8 @@ import ReactDOM from 'react-dom';
 //import { CounterApp } from './components/01-useState/CounterApp';
 //import { FocusScreen } from './components/04-useRef/FocusScreen';
 //import { RealExampleRef } from './components/04-useRef/RealExampleRef';
-import { Layout } from './components/05-useLayoutEffect/Layout';
+//import { Layout } from './components/05-useLayoutEffect/Layout';
+import { Memorize } from './components/06-memo/Memorize';
 
 //import './index.css';
 //import App from './App';
@@ -15,7 +16,7 @@ import { Layout } from './components/05-useLayoutEffect/Layout';
 //import { HookApp } from './HookApp';
 
 ReactDOM.render(
-    <Layout/>,
+    <Memorize/>,
   document.getElementById('root')
 );
 
