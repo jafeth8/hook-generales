@@ -14,7 +14,7 @@ const CallbackHook = () => {
 
     //const incrementar=useCallback(()=>{setCounter(counter+1)},[setCounter])//se puede decir que counter es un valor extraido idependiente por eso me pide agregarlo en las dependecias de la funcion
     
-    const incrementar=useCallback(()=>{setCounter(c=>c+1)},[setCounter])//forma correcta
+    const incrementar=useCallback((num)=>{setCounter(c=>c+num)},[setCounter])//forma correcta
 
     return (
         <div>
