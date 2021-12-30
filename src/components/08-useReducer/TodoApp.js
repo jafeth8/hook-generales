@@ -1,25 +1,31 @@
-import React, { useReducer } from 'react'
+import React, { useEffect, useReducer } from 'react'
 import { UseForm } from '../../hooks/UseForm'
 
 import "./styles.css"
 import { todoReducer } from './todoReducer'
 
-const initialState=[
-    {
-        id:new Date().getTime(),
-        desc:'aprender laravel',
-        done: false
-    }
-]
-
 export const TodoApp = () => {
 
-    const [todos, dispatch] = useReducer(todoReducer, initialState)
+    const init=() => {
+        /*return [
+            {
+                id:new Date().getTime(),
+                desc:'aprender laravel',
+                done: false
+            }
+        ]*/
+        return JSON.parse(localStorage.getItem("tareas")) || []
+    }
+
+    const [todos, dispatch] = useReducer(todoReducer, [] ,init)
 
     const [{description}, handleChange, reset]=UseForm({description:''});
     
     console.log(description);
     
+    useEffect(() => {
+        localStorage.setItem("tareas",JSON.stringify(todos))
+    },[todos])
 
     const handleSubmit=(e)=> {
         e.preventDefault();
