@@ -4,6 +4,10 @@ export const UseForm = (initialState={}) => {
 
     const [values, setValues] = useState(initialState);
 
+    const reset=()=>{
+        setValues(initialState);
+    }
+
     const handleChange=({target})=>{
         //console.log(e.target.name)
         //console.log(e.target.value)
@@ -13,6 +17,6 @@ export const UseForm = (initialState={}) => {
         })
     }
 
-    return [values, handleChange]
+    return [values, handleChange,reset]
     
 }

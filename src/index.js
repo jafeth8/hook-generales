@@ -12,19 +12,24 @@ import ReactDOM from 'react-dom';
 //import { Memorize } from './components/06-memo/Memorize';
 //import { MemoHook } from './components/06-memo/MemoHook';
 //import CallbackHook from './components/06-memos/CallbackHook';
-import { Padre } from './components/07-tarea-memo/Padre';
+//import { Padre } from './components/07-tarea-memo/Padre';
 
 //import './index.css';
 //import App from './App';
 //import reportWebVitals from './reportWebVitals';
 //import { HookApp } from './HookApp';
+import { TodoApp } from './components/08-useReducer/TodoApp';
 
 ReactDOM.render(
-    <Padre/>,
+    <TodoApp/>,
   document.getElementById('root')
 );
+
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 //reportWebVitals();
+
+
