@@ -18,10 +18,11 @@ import ReactDOM from 'react-dom';
 //import App from './App';
 //import reportWebVitals from './reportWebVitals';
 //import { HookApp } from './HookApp';
-import { TodoApp } from './components/08-useReducer/TodoApp';
+//import { TodoApp } from './components/08-useReducer/TodoApp';
+import { MainApp } from './components/09-useContext/MainApp';
 
 ReactDOM.render(
-    <TodoApp/>,
+    <MainApp/>,
   document.getElementById('root')
 );
 
